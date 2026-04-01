@@ -1,16 +1,18 @@
 import { toast } from "react-toastify";
 
-const Cart = ({ carts, setCarts }) => {
+const Cart = ({ carts, setCarts, setActiveTab }) => {
     const total = carts.reduce((sum, item) => sum + item.price, 0);
 
     const handlePayment = () => {
         setCarts([]);
+        setActiveTab("model");
+        toast.dismiss();
+        toast.success("Payment Successful! 🎉");
     };
 
     const handleDelete = (id) => {
         setCarts(carts.filter(c => c.id !== id));
         toast.error("Item removed!");
-        // console.log(carts.filter(c => c.id !== id));
     };
 
     return (
