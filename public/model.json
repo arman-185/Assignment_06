@@ -4,7 +4,7 @@
     "title": "AI Writing Pro",
     "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.\nUnlimited AI generations and 50+ writing templates.",
     "price": 29,
-    "image": "https://picsum.photos/id/1015/300/300",
+    "image": "../src/assets/products/writing_2327400 1.png",
     "status": "popular"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Design Templates Pack",
     "description": "2000+ premium templates for social media, presentations, and marketing materials.\nMonthly updates and commercial license included.",
     "price": 49,
-    "image": "https://picsum.photos/id/102/300/300",
+    "image": "../src/assets/products/design-tool.png",
     "status": "favourite"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Premium Stock Assets",
     "description": "Access millions of royalty-free photos, videos, and graphics for your projects.\nCommercial use with no attribution required.",
     "price": 19,
-    "image": "https://picsum.photos/id/106/300/300",
+    "image": "../src/assets/products/portfolio.png",
     "status": "mostwanted"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Email Marketing Suite",
     "description": "Automate email campaigns with drag-and-drop templates and analytics.\n100+ templates, A/B testing, and campaign insights.",
     "price": 39,
-    "image": "https://picsum.photos/id/1074/300/300",
+    "image": "../src/assets/products/operation.png",
     "status": "popular"
   },
   {
@@ -36,7 +36,7 @@
     "title": "SEO Optimization Tool",
     "description": "Boost your search rankings with keyword analysis and site audits.\nCompetitor analysis and real-time recommendations.",
     "price": 59,
-    "image": "https://picsum.photos/id/133/300/300",
+    "image": "../src/assets/products/portfolio.png ",
     "status": "favourite"
   },
   {
@@ -44,39 +44,7 @@
     "title": "Automation Toolkit",
     "description": "Automate repetitive tasks and streamline your workflow with powerful tools.\n50+ automations, API access, and custom workflows.",
     "price": 79,
-    "image": "https://picsum.photos/id/180/300/300",
+    "image": "../src/assets/products/social-media.png",
     "status": "mostwanted"
-  },
-  {
-    "id": 7,
-    "title": "Resume Builder Pro",
-    "description": "Create professional resumes and cover letters that land interviews.\n100+ templates, ATS optimization, and PDF export.",
-    "price": 15,
-    "image": "https://picsum.photos/id/201/300/300",
-    "status": "popular"
-  },
-  {
-    "id": 8,
-    "title": "Social Media Content Kit",
-    "description": "Complete toolkit for creating engaging social media content across all platforms.\n5000+ assets and analytics dashboard.",
-    "price": 39,
-    "image": "https://picsum.photos/id/251/300/300",
-    "status": "favourite"
-  },
-  {
-    "id": 9,
-    "title": "Video Editor Pro",
-    "description": "Professional video editing with effects, transitions, and stock footage.\n4K resolution, 1000+ effects, and green screen support.",
-    "price": 49,
-    "image": "https://picsum.photos/id/367/300/300",
-    "status": "mostwanted"
-  },
-  {
-    "id": 10,
-    "title": "E-commerce Dashboard",
-    "description": "Manage your online store with inventory, orders, and sales analytics.\nReal-time tracking and detailed sales reports.",
-    "price": 29,
-    "image": "https://picsum.photos/id/433/300/300",
-    "status": "popular"
   }
 ]

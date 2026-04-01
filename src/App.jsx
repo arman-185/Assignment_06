@@ -27,6 +27,9 @@ function App() {
       <Stats></Stats>
       
       <Models modelPromise={modelPromise}></Models>
+
+      <Cart></Cart>
+  
       
       <Steps></Steps>
       <Pricing></Pricing>
