@@ -4,9 +4,11 @@ const ModelCard = ({ model, carts, setCarts }) => {
     const isBuy = carts.some(c => c.id === model.id);
 
     const handleBuy = () => {
-        if (isBuy) return;
+        if (isBuy) {
+            toast.info("Already in cart!");
+            return;
+        }
         setCarts([...carts, model]);
-        toast.dismiss();
         toast.success("Item added to Cart!");
     };
 

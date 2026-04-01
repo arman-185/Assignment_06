@@ -6,8 +6,8 @@ const Cart = ({ carts, setCarts, setActiveTab }) => {
     const handlePayment = () => {
         setCarts([]);
         setActiveTab("model");
-        toast.dismiss();
         toast.success("Payment Successful! 🎉");
+        console.log()
     };
 
     const handleDelete = (id) => {
