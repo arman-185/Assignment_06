@@ -19,8 +19,8 @@ const modelPromise = getModels();
 
 
 function App() {
-  const [activetab, setActiveTab] = useState('model');
-  const[carts, setCarts] = useState([]);
+  const [activeTab, setActiveTab] = useState('model');
+  const [carts, setCarts] = useState([]);
   return (
     <>
       <Navbar></Navbar>
@@ -28,18 +28,17 @@ function App() {
       <Banner></Banner>
 
       <Stats></Stats>
-      {/* name of each tab group should be unique */}
+
       <div className="tabs tabs-box justify-center bg-transparent pt-8">
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 font-bold" aria-label="Products" defaultChecked 
-        onClick={()=>setActiveTab("model")}/>
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-30 font-bold" aria-label="Carts" 
-        onClick={()=>setActiveTab("cart")}/>
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 font-bold" aria-label="Products" defaultChecked
+          onClick={() => setActiveTab("model")} />
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-30 font-bold" aria-label="Carts"
+          onClick={() => setActiveTab("cart")} />
       </div>
 
-      {activetab === "model" && <Models modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Models>}
+      {activeTab === "model" && <Models modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Models>}
 
-      {activetab === "cart" && <Cart carts={carts}></Cart>}
-
+      {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts} setActiveTab={setActiveTab}></Cart>}
       <Steps></Steps>
       <Pricing></Pricing>
       <CTABanner></CTABanner>

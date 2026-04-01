@@ -3,7 +3,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Navbar = ({ cartCount }) => {
+const Navbar = () => {
     return (
         <nav className="navbar bg-white shadow-sm sticky top-0 z-50 px-4 md:px-10">
             <div className="navbar-start">
@@ -22,9 +22,6 @@ const Navbar = ({ cartCount }) => {
             </div>
             <div className="navbar-end gap-3">
                 <div className="indicator">
-                    <span className="indicator-item badge text-white text-xs font-bold" style={{ backgroundColor: '#7c3aed'}}>
-                        {cartCount}
-                    </span>
                     <button className="btn btn-primary btn-sm">
                        <FontAwesomeIcon icon={faCartShopping} />
                     </button>

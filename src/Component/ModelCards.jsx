@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { toast } from "react-toastify";
 
-const ModelCard = ({ model,carts, setCarts}) => {
-    const [isBuy, setIsBuy] = useState(false);
+const ModelCard = ({ model, carts, setCarts }) => {
+    const isBuy = carts.some(c => c.id === model.id);
 
     const handleBuy = () => {
-        setIsBuy(true)
-        setCarts([...carts, model])
-    }
+        if (isBuy) return;
+        setCarts([...carts, model]);
+        toast.dismiss();
+        toast.success("Item added to Cart!");
+    };
 
     return (
         <div className="border border-gray-200 rounded-3xl p-5 flex flex-col gap-3 hover:shadow-md transition-shadow">
@@ -19,6 +21,7 @@ const ModelCard = ({ model,carts, setCarts}) => {
             </p>
             <button
                 onClick={handleBuy}
+                disabled={isBuy}
                 className="btn btn-primary rounded-full"
             >
                 {isBuy ? "Added" : "Buy Now"}

@@ -1,5 +1,17 @@
-const Cart = ({ carts, setCart }) => {
+import { toast } from "react-toastify";
+
+const Cart = ({ carts, setCarts }) => {
     const total = carts.reduce((sum, item) => sum + item.price, 0);
+
+    const handlePayment = () => {
+        setCarts([]);
+    };
+
+    const handleDelete = (id) => {
+        setCarts(carts.filter(c => c.id !== id));
+        toast.error("Item removed!");
+        // console.log(carts.filter(c => c.id !== id));
+    };
 
     return (
         <div className="max-w-2xl mx-auto border border-gray-200 rounded-2xl p-6 mt-6">
@@ -17,7 +29,7 @@ const Cart = ({ carts, setCart }) => {
                         </div>
                     </div>
                     <button
-                        onClick={() => setCart(carts.filter(c => c.id !== item.id))}
+                        onClick={() => handleDelete(item.id)}
                         className="text-xs text-red-400 hover:text-red-600"
                     >
                         Remove
@@ -31,7 +43,7 @@ const Cart = ({ carts, setCart }) => {
                         <span className="text-sm text-gray-500">Total</span>
                         <span className="font-bold text-gray-900">${total}</span>
                     </div>
-                    <button className="w-full py-3 rounded-xl text-sm font-semibold text-white mt-2" style={{ backgroundColor: "#7c3aed" }}>
+                    <button onClick={handlePayment} className="pointer w-full py-3 rounded-xl text-sm font-semibold text-white mt-2" style={{ backgroundColor: "#7c3aed" }}>
                         Proceed To Checkout
                     </button>
                 </>
